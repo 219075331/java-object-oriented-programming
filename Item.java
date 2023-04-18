@@ -1,4 +1,4 @@
-// ÔøΩÔøΩÔøΩK30
+// ââèK31
 public class Item {
 	private String id;
 	private String name;
@@ -11,11 +11,11 @@ public class Item {
 	public Item(String id, String name, int price) {
 		setId(id);
 		setName(name);
-		setPrice(price);		
+		setPrice(price);
 	}
 
-	public void setId(String id){
-		
+	public void setId(String id) {
+		this.id = id;
 		if (id == null) {
 			this.id = "NO_ID";
 		}
@@ -25,7 +25,7 @@ public class Item {
 		return id;
 	}
 
-	public void setName(String name){
+	public void setName(String name) {
 		this.name = name;
 		if (name == null) {
 			this.name = "NO_NAME";

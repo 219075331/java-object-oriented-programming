@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-// ���K30
+
 public class Category {
 	private String id;
 	private String name;
@@ -39,16 +39,16 @@ public class Category {
 		return name;
 	}
 
-	// ����������͏C�����Ȃ��ł���������
+	
 
-	public void setItem(Item item){
+	public void setItem(Item item) throws NullPointerException{
 		if( item == null ) {
-			throw new IllegalArgumentException("nullのオブジェクトがリストに追加されますした。");
+			throw new NullPointerException();
 		}
-		items.add(item);		
+		items.add(item);
 	}
 
-	// ��������艺�͏C�����Ȃ��ł���������
+	
 
 	public List<Item> getItems() {
 		return items;
