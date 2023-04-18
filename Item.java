@@ -1,48 +1,50 @@
-
+// ���K30
 public class Item {
-	
 	private String id;
 	private String name;
-	int price;
-	
+	private int price;
+
 	public Item() {
-		id = "NO_ID";
-		name = "NO_NAME";
+		this(null, null, -1);
 	}
-	public Item(String id, String name, int pirce) {
-		this.setId(id);
-		this.setName(name);
-		this.setPrice(pirce);
+
+	public Item(String id, String name, int price) {
+		setId(id);
+		setName(name);
+		setPrice(price);		
+	}
+
+	public void setId(String id){
 		
+		if (id == null) {
+			this.id = "NO_ID";
+		}
 	}
+
 	public String getId() {
 		return id;
 	}
-	public void setId(String id) {
-		if( id == null ) {
-			id = "NO_ID";
+
+	public void setName(String name){
+		this.name = name;
+		if (name == null) {
+			this.name = "NO_NAME";
 		}
-		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
-	public void setName(String name) {
-		if( name == null ) {
-			name = "NO_NAME";
+
+	public void setPrice(int price) {
+		this.price = price;
+		if (price < 0) {
+			this.price = 0;
 		}
-		this.name = name;
 	}
+
 	public int getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
-		if ( price < 0 ) {
-			price = 0;
-		}
-		this.price = price;
-	}
-	
-	
 
 }
